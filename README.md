@@ -18,21 +18,21 @@
 
 - 메인 기능
   
-    <img src="./src/description_img/main_page1.png" width="800" height="400" />
-    <img src="./src/description_img/main_page2.png" width="800" height="400" />
+    <img src="./react_crud_application/src/description_img/main_page1.png" width="800" height="400" />
+    <img src="./react_crud_application/src/description_img/main_page2.png" width="800" height="400" />
     
     1. 예산 항목 추가
-    <img src="./src/description_img/data 추가.png" width="800" height="400" 
+    <img src="./react_crud_application/src/description_img/data 추가.png" width="800" height="400" 
         
     2. 예산 조회
     3. 항목 수정
        
-    <img src="./src/description_img/data 수정1.png" width="800" height="400" />
-    <img src="./src/description_img/data 수정2.png" width="800" height="400" />
+    <img src="./react_crud_application/src/description_img/data 수정1.png" width="800" height="400" />
+    <img src="./react_crud_application/src/description_img/data 수정2.png" width="800" height="400" />
     
     4. 항목 삭제
       
-    <img src="./src/description_img/data 삭제.png" width="800" height="400" />
+    <img src="./react_crud_application/src/description_img/data 삭제.png" width="800" height="400" />
     
     5. 모든 항목 지우기
     6. Chart 기능
