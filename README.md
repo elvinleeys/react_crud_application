@@ -22,7 +22,7 @@
     <img src="./react_crud_application/src/description_img/main_page2.png" width="800" height="400" />
     
     1. 예산 항목 추가
-    <img src="./react_crud_application/src/description_img/data 추가.png" width="800" height="400" 
+    <img src="./react_crud_application/src/description_img/data 추가.png" width="800" height="400" />
         
     2. 예산 조회
     3. 항목 수정
