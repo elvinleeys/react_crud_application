@@ -1,4 +1,4 @@
-<div align=center>
+
 # React_CRUD_Application
 ## 예산 계산기
 
@@ -17,18 +17,24 @@
 
 
 - 메인 기능
+  
     <img src="./src/description_img/main_page1.png" width="800" height="400" />
     <img src="./src/description_img/main_page2.png" width="800" height="400" />
-    - 예산 항목 추가
-    <img src="./src/description_img/data 추가.png" width="800" height="400" />
-    - 예산 조회
-    - 항목 수정
+    
+    1. 예산 항목 추가
+    <img src="./src/description_img/data 추가.png" width="800" height="400" 
+        
+    2. 예산 조회
+    3. 항목 수정
+       
     <img src="./src/description_img/data 수정1.png" width="800" height="400" />
     <img src="./src/description_img/data 수정2.png" width="800" height="400" />
-    - 항목 삭제
+    
+    4. 항목 삭제
+      
     <img src="./src/description_img/data 삭제.png" width="800" height="400" />
-    - 모든 항목 지우기
-    - Chart 기능
+    
+    5. 모든 항목 지우기
+    6. Chart 기능
         - pie chart : 가장 높은 비율과 가장 낮은 비율의 항목 명시
         - bar chart : 가장 높은 금액과 가장 낮은 금액의 항목 명시
-</div>
