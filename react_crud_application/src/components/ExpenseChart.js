@@ -24,8 +24,7 @@ const ExpenseChart = React.memo(({ expenses }) => {
 
     // 각 항목의 백분율 계산
     const percentageData = expenses.map((expense) => ((expense.amount / totalAmount) * 100));
-    console.log(percentageData)
-    console.log(typeof percentageData)
+    
     // 가장 높은 비율과 낮은 비율 구하기
     // toFixed 일정 고정 소수점 이하 숫자를 반올림하고 그 결과를 문자열로 반환
     // 가장 높은 비율과 낮은 비율 구하기
