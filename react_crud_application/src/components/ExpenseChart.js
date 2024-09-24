@@ -32,6 +32,11 @@ const ExpenseChart = React.memo(({ expenses }) => {
     const minPercentage = Math.min(...percentageData);
     const maxIndex = percentageData.indexOf(maxPercentage);
     const minIndex = percentageData.indexOf(minPercentage);
+    const maxAmount = Math.max(...expenses.map(expense => expense.amount));
+    const minAmount = Math.min(...expenses.map(expense => expense.amount));
+
+    const maxExpenses = expenses.filter(expense => expense.amount === maxAmount);
+    const minExpenses = expenses.filter(expense => expense.amount === minAmount);
 
     // 필요할 때만 소수점 고정
     const formattedPercentageData = percentageData.map((percentData) => percentData.toFixed(2));
@@ -82,10 +87,30 @@ const ExpenseChart = React.memo(({ expenses }) => {
                 </S.PieChartWrapper>
                 <S.DescriptionContainer>
                     <p>
-                        <S.HighPointText>가장 높은 비율</S.HighPointText>을 차지한 것은 <S.HighPointText>{expenses[maxIndex].charge}</S.HighPointText> 입니다. <S.HighPointText>({formattedPercentageData[maxIndex]}%)</S.HighPointText>
+                        <S.HighPointText>가장 높은 비율</S.HighPointText>을 차지한 것은&nbsp; 
+                        {maxExpenses.length >= 2 ? maxExpenses.map(expense => (
+                            <S.HighPointText>
+                                {expense.charge}&nbsp;
+                            </S.HighPointText> 
+                        )) : (
+                            <S.HighPointText>
+                                {expenses[maxIndex].charge}
+                            </S.HighPointText>
+                        )}
+                        입니다. <S.HighPointText>({formattedPercentageData[maxIndex]}%)</S.HighPointText>
                     </p>
                     <p>
-                        <S.LowPointText>가장 낮은 비율</S.LowPointText>을 차지한 것은 <S.LowPointText>{expenses[minIndex].charge}</S.LowPointText> 입니다. <S.LowPointText>({formattedPercentageData[minIndex]}%)</S.LowPointText>
+                        <S.LowPointText>가장 낮은 비율</S.LowPointText>을 차지한 것은&nbsp; 
+                        {minExpenses.length >= 2 ? minExpenses.map(expense => (
+                            <S.LowPointText>
+                                {expense.charge}&nbsp;
+                            </S.LowPointText> 
+                        )) : (
+                            <S.LowPointText>
+                                {expenses[minIndex].charge}
+                            </S.LowPointText>
+                        )}
+                        입니다. <S.LowPointText>({formattedPercentageData[minIndex]}%)</S.LowPointText>
                     </p>
                 </S.DescriptionContainer>
             </S.PieChartContainer>
@@ -95,10 +120,30 @@ const ExpenseChart = React.memo(({ expenses }) => {
                 </S.BarChartWrapper>
                 <S.DescriptionContainer>
                     <p>
-                        <S.HighPointText>가장 높은 비율</S.HighPointText>을 차지한 <S.HighPointText>{expenses[maxIndex].charge}</S.HighPointText>는 <S.HighPointText>{expenses[maxIndex].amount}원</S.HighPointText> 입니다.
+                        <S.HighPointText>가장 높은 비율</S.HighPointText>을 차지한&nbsp; 
+                        {maxExpenses.length >= 2 ? maxExpenses.map(expense => (
+                            <S.HighPointText>
+                                {expense.charge}&nbsp;
+                            </S.HighPointText> 
+                        )) : (
+                            <S.HighPointText>
+                                {expenses[maxIndex].charge}
+                            </S.HighPointText>
+                        )}
+                        는 <S.HighPointText>{expenses[maxIndex].amount}원</S.HighPointText>입니다.
                     </p>
                     <p>
-                        <S.LowPointText>가장 낮은 비율</S.LowPointText>을 차지한 <S.LowPointText>{expenses[minIndex].charge}</S.LowPointText>는 <S.LowPointText>{expenses[minIndex].amount}원</S.LowPointText> 입니다. 
+                        <S.LowPointText>가장 낮은 비율</S.LowPointText>을 차지한&nbsp; 
+                        {minExpenses.length >= 2 ? minExpenses.map(expense => (
+                            <S.LowPointText>
+                                {expense.charge}&nbsp;
+                            </S.LowPointText> 
+                        )) : (
+                            <S.LowPointText>
+                                {expenses[minIndex].charge}
+                            </S.LowPointText>
+                        )}
+                        는 <S.LowPointText>{expenses[minIndex].amount}원</S.LowPointText>입니다. 
                     </p>
                 </S.DescriptionContainer>
             </S.BarChartContainer>
